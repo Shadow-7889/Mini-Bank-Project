@@ -34,37 +34,6 @@ build.sh               compiles the code and builds the JAR
 manifest.mf            JAR manifest (Main-Class: MiniBank)
 ```
 
-## Build
-
-On Linux, macOS or Git Bash:
-
-```
-sh build.sh
-```
-
-Or manually:
-
-```
-mkdir out
-javac -d out $(find src -name "*.java")
-jar cfm minibank.jar manifest.mf -C out .
-```
-
-On Windows PowerShell:
-
-```
-mkdir out
-javac -d out (Get-ChildItem -Recurse -Filter *.java src).FullName
-jar cfm minibank.jar manifest.mf -C out .
-```
-
-## Run
-
-Start the interactive menu:
-
-```
-java -jar minibank.jar
-```
 
 | Option | Action |
 |---|---|
