@@ -1,0 +1,16 @@
+package exception;
+
+/** Thrown when a withdrawal is not allowed; carries how much money is missing. */
+public class InsufficientFundsException extends BankException {
+    private static final long serialVersionUID = 1L;
+    private final long shortfall;
+
+    public InsufficientFundsException(long shortfall) {
+        super("Withdrawal failed: short by " + shortfall);
+        this.shortfall = shortfall;
+    }
+
+    public long getShortfall() {
+        return shortfall;
+    }
+}
